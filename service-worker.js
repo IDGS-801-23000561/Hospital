@@ -6,6 +6,10 @@ const RECURSOS = [
     "/app.js",
     "/manifest.webmanifest",
 
+    "/login/login.html",
+    "/login/login.css",
+    "/login/login.js",
+
     "/mascotas/mascotas.html",
     "/mascotas/mascotas.css",
     "/mascotas/mascotas.js",
@@ -18,7 +22,6 @@ const RECURSOS = [
     "/img/champo.jpeg",
     "/img/hueso.jpeg"
 ];
-
 
 // INSTALAR
 self.addEventListener("install", (event) => {

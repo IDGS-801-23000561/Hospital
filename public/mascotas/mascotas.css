@@ -114,3 +114,52 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
 }
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.encabezado h1 {
+    margin: 5px 0 0;
+    text-align: left;
+}
+
+#nombre-usuario {
+    color: #777;
+    font-size: 14px;
+}
+
+#btn-logout {
+    background-color: #2563a6;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+#btn-logout:hover {
+    background-color: #174f8a;
+}
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #btn-logout {
+        padding: 10px 14px;
+    }
+}
