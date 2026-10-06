@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/IDGS-801-23000561/Hospital#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5"
   }
 }
