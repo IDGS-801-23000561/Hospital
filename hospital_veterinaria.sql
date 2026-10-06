@@ -1,0 +1,69 @@
+DROP DATABASE IF EXISTS hospital_veterinaria;
+CREATE DATABASE hospital_veterinaria;
+USE hospital_veterinaria;
+
+
+CREATE TABLE mascotas (
+    pk_mascota INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    tipo INT, -- 1 Canino, 2 Felino, 3 Roedor, 4 Ave, 5 Marino, 6 Reptiles
+    raza VARCHAR(100),
+    edad INT,
+    peso DOUBLE,
+    observaciones VARCHAR(255),
+    imagen VARCHAR(255),
+    estado INT DEFAULT 1
+);
+
+
+CREATE TABLE productos (
+    pk_producto INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    descripcion VARCHAR(255),
+    precio DOUBLE,
+    cantidad INT,
+    imagen VARCHAR(255),
+    estado INT DEFAULT 1
+);
+
+
+CREATE TABLE usuarios (
+    pk_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(100),
+    pass VARCHAR(100),
+    nombre VARCHAR(100)
+);
+
+
+-- DATOS MASCOTAS
+INSERT INTO mascotas(nombre, tipo, raza, edad, peso, observaciones, imagen)
+VALUES ('Jeipi', 1, 'Tailandés', 2, 5.2, 'Le gusta el catnip', 'canino.jpeg');
+
+INSERT INTO mascotas(nombre, tipo, raza, edad, peso, observaciones, imagen)
+VALUES ('JotaPe', 2, 'Persa', 7, 5.7, 'A ese sí le gusta la mota', 'felino.jpeg');
+
+INSERT INTO mascotas(nombre, tipo, raza, edad, peso, observaciones, imagen)
+VALUES ('Juan Perico', 4, 'Loro', 1, 0.5, 'Inálalo, no sospeches del empaque', 'ave.jpeg');
+
+
+-- DATOS PRODUCTOS
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Croquetas', 'Están ricas, ya las probé', 899.99, 15, 'Croquetas.jpeg');
+
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Champú', 'Este no lo he usado, el perro en la etiqueta se ve felíz y limpio', 200.59, 20, 'champo.jpeg');
+
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Premios', 'Huesos', 100.00, 40, 'hueso.jpeg');
+
+
+-- DATOS USUARIO
+INSERT INTO usuarios(usuario, pass, nombre)
+VALUES ('admin', '12345', 'Administrador');
+
+
+SELECT * FROM mascotas;
+
+SELECT * FROM productos;
+
+SELECT * FROM usuarios;

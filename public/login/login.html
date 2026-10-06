@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hospital Veterinario | Iniciar sesión</title>
+
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+
+  <main class="login-container">
+
+    <section class="login-info">
+      <div>
+        <span class="etiqueta">HOSPITAL VETERINARIO</span>
+
+        <h1>
+          Cuidamos a quienes<br>
+          más quieres.
+        </h1>
+
+        <p>
+          Administra mascotas, productos y la información
+          del hospital desde un solo lugar.
+        </p>
+      </div>
+
+      <div class="mensaje">
+        🐾 Cuidado y atención para tus mascotas.
+      </div>
+    </section>
+
+
+    <section class="login-card">
+
+      <div class="icono">
+        ♡
+      </div>
+
+      <h2>Qué bueno verte de nuevo</h2>
+
+      <p class="subtitulo">
+        Inicia sesión para entrar al sistema.
+      </p>
+
+      <form id="login-form">
+
+        <label for="usuario">Usuario</label>
+
+        <input
+          type="text"
+          id="usuario"
+          placeholder="Introduce tu usuario"
+          autocomplete="username"
+          required
+        >
+
+
+        <label for="password">Contraseña</label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Introduce tu contraseña"
+          autocomplete="current-password"
+          required
+        >
+
+
+        <p id="mensaje-error"></p>
+
+
+        <button type="submit">
+          Iniciar sesión →
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <script src="./login.js"></script>
+  <script src="../app.js"></script>
+
+</body>
+</html>
