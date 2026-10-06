@@ -107,3 +107,10 @@ h1 {
     margin: 7px 0 0;
     line-height: 1.4;
 }
+
+.mascota-imagen {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,42 +1,58 @@
-const express = require("express")
-const conexion = require("./db")
+const express = require("express");
+const path = require("path");
+const conexion = require("./db");
 
 const app = express();
 
 app.use(express.json());
-app.use(express.static("public"))
 
-app.get("/api/mascotas", (req,res) => {
+app.use(express.static("public"));
+
+app.use("/img", express.static("img"));
+
+app.get("/service-worker.js", (req, res) => {
+    res.sendFile(path.join(__dirname, "service-worker.js"));
+});
+
+app.get("/manifest.webmanifest", (req, res) => {
+    res.sendFile(path.join(__dirname, "manifest.webmanifest"));
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "app.html"));
+});
+
+app.get("/api/mascotas", (req, res) => {
+
     const sql = `
-        SELECT 
+        SELECT
             pk_mascota,
             nombre,
             tipo,
             raza,
             edad,
             peso,
-            observaciones
+            observaciones,
+            imagen
         FROM mascotas
         WHERE estado = 1
     `;
 
     conexion.query(sql, (error, resultados) => {
+
         if (error) {
-            console.error("Error al hacer la query de mascotas: ", error);
+            console.error("Error al hacer la query de mascotas:", error);
 
             return res.status(500).json({
                 error: "Error al obtener mascotas"
             });
         }
 
-
         res.json(resultados);
     });
 });
 
+
 app.listen(3000, () => {
     console.log("Servidor corriendo en http://localhost:3000");
 });
-
-
-
