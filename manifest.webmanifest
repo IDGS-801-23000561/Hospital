@@ -1,0 +1,10 @@
+{
+  "name": "Hospital Veterinaria",
+  "short_name": "Veterinaria",
+  "description": "Aplicación del Hospital Veterinaria",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7fa",
+  "theme_color": "#2563a6",
+  "lang": "es"
+}
