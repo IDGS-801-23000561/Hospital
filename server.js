@@ -6,10 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"))
 
-app.listen(3000, () => {
-    console.log("Servidor corriendo en http://localhost:3000");
-});
-
 app.get("/api/mascotas", (req,res) => {
     const sql = `
         SELECT 
@@ -19,7 +15,7 @@ app.get("/api/mascotas", (req,res) => {
             raza,
             edad,
             peso,
-            observaciones,
+            observaciones
         FROM mascotas
         WHERE estado = 1
     `;
@@ -37,4 +33,10 @@ app.get("/api/mascotas", (req,res) => {
         res.json(resultados);
     });
 });
+
+app.listen(3000, () => {
+    console.log("Servidor corriendo en http://localhost:3000");
+});
+
+
 
