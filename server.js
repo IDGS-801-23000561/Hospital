@@ -52,6 +52,34 @@ app.get("/api/mascotas", (req, res) => {
     });
 });
 
+app.get("/api/productos", (req, res) => {
+
+    const sql = `
+        SELECT
+            pk_producto,
+            nombre,
+            descripcion,
+            precio,
+            cantidad,
+            imagen
+        FROM productos
+        WHERE estado = 1
+    `;
+
+    conexion.query(sql, (error, resultados) => {
+
+        if (error) {
+            console.error("Error al hacer la query de productos:", error);
+
+            return res.status(500).json({
+                error: "Error al obtener productos"
+            });
+        }
+
+        res.json(resultados);
+    });
+});
+
 
 app.listen(3000, () => {
     console.log("Servidor corriendo en http://localhost:3000");

@@ -8,7 +8,15 @@ const RECURSOS = [
 
     "/mascotas/mascotas.html",
     "/mascotas/mascotas.css",
-    "/mascotas/mascotas.js"
+    "/mascotas/mascotas.js",
+
+    "/productos/productos.html",
+    "/productos/productos.css",
+    "/productos/productos.js",
+
+    "/img/Croquetas.jpeg",
+    "/img/champo.jpeg",
+    "/img/hueso.jpeg"
 ];
 
 

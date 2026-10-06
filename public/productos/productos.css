@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef3f8;
+    color: #333;
+}
+
+.main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h1 {
+    color: #174f8a;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#catalogo-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.card-header {
+    background-color: #2563a6;
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 23px;
+}
+
+.card-header span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.dato-titulo {
+    font-weight: bold;
+    color: #174f8a;
+}
+
+.descripcion {
+    margin-top: 18px;
+
+    background-color: #f4f7fb;
+
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.descripcion p {
+    margin: 7px 0 0;
+    line-height: 1.4;
+}
+
+.producto-imagen {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}

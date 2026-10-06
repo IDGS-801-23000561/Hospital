@@ -22,6 +22,7 @@ CREATE TABLE productos (
     descripcion VARCHAR(255),
     precio DOUBLE,
     cantidad INT,
+    imagen VARCHAR(255),
     estado INT DEFAULT 1
 );
 
@@ -46,14 +47,14 @@ VALUES ('Juan Perico', 4, 'Loro', 1, 0.5, 'Inálalo, no sospeches del empaque', 
 
 
 -- DATOS PRODUCTOS
-INSERT INTO productos(nombre, descripcion, precio, cantidad)
-VALUES ('Croquetas', 'Están ricas, ya las probé', 899.99, 15);
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Croquetas', 'Están ricas, ya las probé', 899.99, 15, 'Croquetas.jpeg');
 
-INSERT INTO productos(nombre, descripcion, precio, cantidad)
-VALUES ('Champú', 'Este no lo he usado, el perro en la etiqueta se ve felíz y limpio', 200.59, 20);
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Champú', 'Este no lo he usado, el perro en la etiqueta se ve felíz y limpio', 200.59, 20, 'champo.jpeg');
 
-INSERT INTO productos(nombre, descripcion, precio, cantidad)
-VALUES ('Premios', 'Huesos', 100.00, 40);
+INSERT INTO productos(nombre, descripcion, precio, cantidad, imagen)
+VALUES ('Premios', 'Huesos', 100.00, 40, 'hueso.jpeg');
 
 
 -- DATOS USUARIO
