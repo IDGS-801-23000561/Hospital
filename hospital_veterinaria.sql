@@ -23,6 +23,13 @@ CREATE TABLE productos (
     estado INT DEFAULT 1
 );
 
+CREATE TABLE usuarios (
+	pk_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    usuario VARCHAR(100),
+    pass VARCHAR(100),
+    nombre VARCHAR(100)
+);
+
 
 -- DATOS MASCOTAS --
 INSERT INTO mascotas(nombre, tipo, raza, edad, peso, observaciones) VALUES ('Jeipi', 1, 'Tailandés', 2, 5.2, 'Le gusta el catnip');
@@ -35,9 +42,15 @@ INSERT INTO productos(nombre, descripcion, precio, cantidad) VALUES('Croquetas',
 INSERT INTO productos(nombre, descripcion, precio, cantidad) VALUES('Champú', 'Este no lo he usado, el perro en la etiqueta se ve felíz y limpio', 200.59, 20);
 INSERT INTO productos(nombre, descripcion, precio, cantidad) VALUES('Premios', 'Huesos', 100.00, 40);
 
+
+-- DATOS USUARIO --
+INSERT INTO usuarios(usuario, pass, nombre) VALUES('admin', '12345', 'Administrador');
+
 SELECT * FROM mascotas;
 
 SELECT * FROM productos;
+
+SELECT * FROM usuarios;
 
 
 
